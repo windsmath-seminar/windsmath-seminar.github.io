@@ -9,6 +9,10 @@ a.anchor {
     visibility: hidden;
 }
 
+.home-font {
+  font-family: Arial, sans-serif;
+}
+
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
     background-color: #3d85c6;
     color: #ecf0f1;
