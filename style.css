@@ -1,0 +1,394 @@
+.container-1 {
+  font-size: 18pt;
+  color: #0F09A1;
+  text-align: justify;
+}
+
+@media (max-width : 767px ){
+    body.poster {
+        margin-top: 60vh;
+    }
+    .container-1 {
+    font-size: 12pt;
+  }
+}
+.hoverable {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+body.poster {
+    background-attachment: fixed;
+}
+
+.top-5 {
+    top: 5px;
+}
+.profile-picture {
+    width: 150px;
+    height: 150px;
+}
+
+/* Default style for profile names and locations */
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.profile-location {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.profile-location-2 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+    line-height: 1;
+}
+
+.profile-name a {
+  color: #0F09A1;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.profile-name a:hover {
+  color: #4BD1A0;
+}
+
+/* Style for larger screens */
+@media (min-width: 768px) {
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Style for smaller screens */
+@media (max-width: 767px) {
+  .profile-name {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .profile-location {
+    font-size: 8px;
+    margin-bottom: 10px;
+      line-height: 0.5;
+  }
+    .profile-location-2 {
+    font-size: 8px;
+        margin-bottom: 10px;
+    margin-bottom: 5px;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+}
+.upcoming-event {
+  margin-top: 50px; /* adjust the margin to your liking */
+}
+
+
+.event-block {
+  display: flex;
+  background-color: #F1EEE6;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.event-block:hover {
+  background-color: #FBF8F0;
+}
+
+.event-block img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-left: 100px; /* add margin to the left side */
+}
+
+.event-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.event-details p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.black-text {
+  color: black;
+}
+
+.event-link {
+  color: black;
+  text-decoration: none;
+}
+
+.event-link:hover {
+  color: black;
+  text-decoration: none;
+}
+/* Style for the event details section */
+.event-details {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.event-title {
+  font-size: 36px;
+  color: black;
+}
+
+.event-subtitle {
+  font-size: 24px;
+  color: black;
+}
+
+.event-date {
+  font-size: 24px;
+  color: black;
+}
+
+.event-body {
+  display: flex;
+  margin-top: 50px;
+}
+
+.speaker-pic img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+.og_all-pic img {
+  width: 300px;
+  height: 400px;
+  margin-right: 50px;
+}
+
+
+.event-info {
+  flex: 1;
+}
+
+.event-info .event-section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.event-info .event-section-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
+    text-align: justify;
+}
+
+.speaker-info {
+  list-style: none;
+  font-size: 24px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.speaker-info-item {
+  margin-bottom: 5px;
+  color: black;
+    text-align: justify;
+}
+
+@media (max-width: 420px) {
+  h2.text-center {
+    font-size: 16px;
+  }
+     h3.text-center {
+    font-size: 16px;
+        
+  }
+    h4.text-center {
+    font-size: 16px;
+        
+  }
+  p.text-center {
+    font-size: 12px;
+  }
+    
+     h1.event-title {
+    font-size: 18px;
+    margin-top: 20px; /* 增加段前距 */
+  }
+    li.event-title {
+    font-size: 18px;
+    margin-top: 20px; /* 增加段前距 */
+  }
+    li.speaker-info-item{
+    font-size: 18px;
+  }
+  .speaker-pic img {
+  width: 100px !important;
+  height: 100px !important;
+  margin-right: 0px !important;   
+}
+    .event-info .event-section-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: black;
+       
+}
+      .event-info .event-section-text {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: black;
+}
+    .event-info .speaker-info-item {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: black;
+}
+    .event-block img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-left: 40px; /* add margin to the left side */
+}
+    .event-details {
+    margin-left: 0px;
+      margin-right: 0px;  
+  }
+    .event-block img {
+     margin-left: 0px;
+      margin-right: 0px;  
+    margin-bottom: 0px;
+  }
+    container     
+    .event-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        justify-content: center;
+        
+  }
+
+    p.event-subtitle{
+       font-size: 12px; 
+    }
+    
+    p.event-date{
+       font-size: 12px; 
+    }
+    .event-details h2 {
+  font-size: 15px;
+}
+
+.event-details h4 {
+  font-size: 12px;
+}
+
+.event-details p {
+  font-size: 8px;
+}
+}
+@media (max-width: 767px) {
+  .speaker-pic img {
+  width: 250px;
+  height: 250px;
+  margin-right: 20px ;
+}
+    .event-body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+p.index_big_time {
+    font-size: 25px;
+    margin-top: 30px ;
+    margin-bottom: 30px ;
+}
+div.nextmeeting_size{
+    width:750px;
+    height:300px;
+}
+.logo_style {
+   width: 40px;
+   height: 40px;
+}
+@media (max-width: 1400px) {
+    div.nextmeeting_size{
+    width:600px;
+}
+    p.container-1{
+        margin-left: 20px;
+        margin-right:20px;
+    }
+}
+
+@media (max-width : 1061px ){
+    p.index_big_time {
+    font-size: 22px ;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+}
+    div.nextmeeting_size{
+    width:450px;
+}
+    .speaker-pic img {
+  width: 250px;
+  height: 250px;
+  margin-right: 20px ;
+}
+}
+
+@media (max-width: 768px) {
+    p.index_big_time {
+    font-size: 18px ;
+    margin-top: 15px ;
+    margin-bottom: 15px ;
+}
+     div.nextmeeting_size{
+    width:450px;
+}
+
+}
+
+@media (max-width: 420px) {
+    p.index_big_time {
+    font-size: 18px ;
+    margin-top: 15px ;
+    margin-bottom: 15px ;
+}
+     div.nextmeeting_size{
+    width:280px;
+     height:200px;
+}
+    .flex-column .text-center {
+            margin: 0px ;
+  }
+    .btn-register-talk {
+    display: none;
+  }  
+    p.container-1{
+        margin-left: 0px;
+        margin-right:0px;
+    }
+        .logo_style {
+   width: 20px;
+   height: 20px;
+}
+}
