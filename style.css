@@ -329,6 +329,19 @@ div.nextmeeting_size{
    width: 40px;
    height: 40px;
 }
+
+.my-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.my-list li::before {
+  content: "\2022"; /* Use a bullet point character */
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  color: #007bff; /* Use a blue color for the bullet point */
+}
+
 @media (max-width: 1400px) {
     div.nextmeeting_size{
     width:600px;
@@ -392,3 +405,4 @@ div.nextmeeting_size{
    height: 20px;
 }
 }
+
