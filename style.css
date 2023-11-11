@@ -375,6 +375,19 @@ div.nextmeeting_size{
         margin-left: 20px;
         margin-right:20px;
     }
+.bg-white {
+  display: flex; /* Use flexbox to align the items */
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Align items horizontally */
+  height: 200px; /* Set a fixed height for the divs */
+  padding: 0 15px; /* Adjust padding as needed */
+}
+
+.img-fluid {
+  max-height: 100%; /* Set max-height to be the same as the containing div */
+  width: auto; /* Scale the width automatically */
+  object-fit: contain; /* This prevents the images from being cropped */
+}
 }
 
 @media (max-width : 1061px ){
