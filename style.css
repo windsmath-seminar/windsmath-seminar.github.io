@@ -10,14 +10,14 @@ iframe {
 }
 */
 .video-iframe {
-  width: 448px; /* Default size */
-  height: 252px;
+  width: 560px; /* Default size */
+  height: 315px;
 }
 
-@media (max-width : 129px ){
+@media (max-width : 1209px ){
   .video-iframe {
-    width: 358px; /* Smaller size */
-    height: 202px;
+    width: 448px; /* Smaller size */
+    height: 448px;
   }
 }
 
