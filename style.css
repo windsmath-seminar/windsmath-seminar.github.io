@@ -9,6 +9,18 @@ iframe {
   max-height: 80%
 }
 */
+.video-iframe {
+  width: 448px; /* Default size */
+  height: 252px;
+}
+
+@media (max-width : 129px ){
+  .video-iframe {
+    width: 358px; /* Smaller size */
+    height: 202px;
+  }
+}
+
 @media (max-width : 767px ){
     body.poster {
         margin-top: 60vh;
@@ -16,7 +28,17 @@ iframe {
     .container-1 {
     font-size: 12pt;
   }
+    /* Redefine .video-iframe size for smaller screens */
 }
+
+@media (max-width : 419px ){
+    /* Redefine .video-iframe size for smaller screens */
+  .video-iframe {
+    width: 286px; /* Smaller size */
+    height: 161px;
+  }
+}
+
 .hoverable {
   cursor: pointer;
 }
