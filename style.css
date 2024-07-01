@@ -389,7 +389,7 @@ p.index_big_time {
 }
 div.nextmeeting_size{
     width:600px;
-    height:230px;
+    height:290px;
 }
 .logo_style {
    width: 40px;
@@ -411,7 +411,7 @@ div.nextmeeting_size{
 @media (max-width: 1400px) {
     div.nextmeeting_size{
     width:500px;
-        height:250px;
+        height:310px;
 }
     p.container-1{
         margin-left: 20px;
@@ -440,7 +440,7 @@ div.nextmeeting_size{
 }
     div.nextmeeting_size{
     width:450px;
-        height:250px;
+        height:280px;
 }
     .speaker-pic img {
   width: 250px;
@@ -456,8 +456,8 @@ div.nextmeeting_size{
     margin-bottom: 15px ;
 }
      div.nextmeeting_size{
-    width:380px;
-    height:280px;
+    width:410px;
+    height:310px;
 }
 
 }
@@ -470,7 +470,7 @@ div.nextmeeting_size{
 }
      div.nextmeeting_size{
     width:320px;
-     height:180px;
+     height:210px;
 }
     .flex-column .text-center {
             margin: 0px ;
