@@ -265,7 +265,19 @@ body.poster {
       margin: 0;
     }
   }
-
+.schedule {
+            display: inline-block; /* Make the list inline-block to center it */
+            text-align: left; /* Align text within the list to the left */
+            color: #333; /* Adjust the text color as needed */
+            line-height: 1.5; /* Adjust the line height as needed */
+            margin-left: 35px;
+            margin-right: 35px;
+            padding: 0; /* Remove default padding */
+        }
+.schedule li {
+            margin-bottom: 10px; /* Adjust the space between items as needed */
+            list-style-type: disc; /* Change the list style to black dots */
+        }
 @media (max-width: 420px) {
   h2.text-center {
     font-size: 16px;
@@ -376,8 +388,8 @@ p.index_big_time {
     margin-bottom: 30px ;
 }
 div.nextmeeting_size{
-    width:750px;
-    height:250px;
+    width:600px;
+    height:200px;
 }
 .logo_style {
    width: 40px;
@@ -398,7 +410,7 @@ div.nextmeeting_size{
 
 @media (max-width: 1400px) {
     div.nextmeeting_size{
-    width:600px;
+    width:500px;
 }
     p.container-1{
         margin-left: 20px;
