@@ -31,7 +31,7 @@ iframe {
     /* Redefine .video-iframe size for smaller screens */
 }
 
-@media (max-width : 517px ){
+@media (max-width : 419px ){
     /* Redefine .video-iframe size for smaller screens */
   .video-iframe {
     width: 286px; /* Smaller size */
@@ -358,12 +358,6 @@ body.poster {
   font-size: 8px;
 }
 }
-
-div.nextmeeting_size{
-    width:750px;
-    height:400px;
-}
-
 @media (max-width: 767px) {
   .speaker-pic img {
   width: 250px;
@@ -381,7 +375,10 @@ p.index_big_time {
     margin-top: 30px ;
     margin-bottom: 30px ;
 }
-
+div.nextmeeting_size{
+    width:750px;
+    height:250px;
+}
 .logo_style {
    width: 40px;
    height: 40px;
@@ -458,7 +455,7 @@ p.index_big_time {
 }
      div.nextmeeting_size{
     width:280px;
-     height:280px;
+     height:150px;
 }
     .flex-column .text-center {
             margin: 0px ;
@@ -475,3 +472,4 @@ p.index_big_time {
    height: 20px;
 }
 }
+
