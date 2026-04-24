@@ -492,12 +492,22 @@ div.nextmeeting_size{
 
 
 
+
+
+
+
+
+
+
+
+
 .festival-block {
   display: block !important;
-  width: 100%;
+  width: 100% !important;
 }
 
 .festival-block .event-details {
+  display: block !important;
   width: 100% !important;
   max-width: none !important;
   flex: none !important;
@@ -507,12 +517,22 @@ div.nextmeeting_size{
   display: flex !important;
   flex-direction: row !important;
   gap: 12px;
-  margin-top: 25px;
   width: 100% !important;
+  margin-top: 25px;
 }
 
-.festival-block .video-row .video-iframe {
-  flex: 1 1 0;
+.festival-block .video-iframe {
+  flex: 1 1 50% !important;
   width: 50% !important;
-  height: 360px;
+  height: 360px !important;
+}
+
+@media (max-width: 768px) {
+  .festival-block .video-row {
+    flex-direction: column !important;
+  }
+
+  .festival-block .video-iframe {
+    width: 100% !important;
+  }
 }
