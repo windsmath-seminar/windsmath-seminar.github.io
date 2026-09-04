@@ -62,7 +62,7 @@ function createReadAloudPlayer() {
 
             <span class="read-aloud-speaker"
                   aria-hidden="true">
-                üîä
+                ?üîä
             </span>
 
             <div class="read-aloud-brand-text">
@@ -89,7 +89,7 @@ function createReadAloudPlayer() {
                     type="button"
                     aria-label="Previous section"
                     title="Previous section">
-                ‚Üê
+                ?Üê
             </button>
 
 
@@ -99,7 +99,7 @@ function createReadAloudPlayer() {
                     aria-label="Listen to this page">
 
                 <span class="play-symbol">
-                    ‚ñ∂
+                    ?ñ?
                 </span>
 
                 <span class="play-text">
@@ -114,7 +114,7 @@ function createReadAloudPlayer() {
                     type="button"
                     aria-label="Stop reading"
                     title="Stop">
-                ‚ñ†
+                ?ñ?
             </button>
 
 
@@ -123,7 +123,7 @@ function createReadAloudPlayer() {
                     type="button"
                     aria-label="Next section"
                     title="Next section">
-                ‚Üí
+                ?Üí
             </button>
 
 
@@ -136,28 +136,24 @@ function createReadAloudPlayer() {
                 <select id="readSpeed"
                         aria-label="Reading speed">
 
-                    <option value="0.5" selected>
-                        0.5√ó
-                    </option>
-
-                    <option value="0.6">
-                        0.6√ó
+                    <option value="0.5">
+                        0.5?ó
                     </option>
 
                     <option value="0.75">
-                        0.75√ó
+                        0.75?ó
                     </option>
 
-                    <option value="1">
-                        1.0√ó
+                    <option value="1" selected>
+                        1.0?ó
                     </option>
 
                     <option value="1.25">
-                        1.25√ó
+                        1.25?ó
                     </option>
 
                     <option value="1.5">
-                        1.5√ó
+                        1.5?ó
                     </option>
 
                 </select>
@@ -310,7 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (state === "pause") {
 
             playButton.innerHTML = `
-                <span class="play-symbol">‚è∏</span>
+                <span class="play-symbol">?è?</span>
                 <span class="play-text">Pause</span>
             `;
 
@@ -326,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (state === "resume") {
 
             playButton.innerHTML = `
-                <span class="play-symbol">‚ñ∂</span>
+                <span class="play-symbol">?ñ?</span>
                 <span class="play-text">Resume</span>
             `;
 
@@ -340,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         playButton.innerHTML = `
-            <span class="play-symbol">‚ñ∂</span>
+            <span class="play-symbol">?ñ?</span>
             <span class="play-text">Listen</span>
         `;
 
