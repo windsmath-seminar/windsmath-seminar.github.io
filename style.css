@@ -536,3 +536,362 @@ div.nextmeeting_size{
     width: 100% !important;
   }
 }
+
+
+
+/* ==================================================
+   WINDSMATH Read Aloud
+   ================================================== */
+
+
+/* 给底部悬浮播放器留出空间 */
+body.has-read-aloud {
+    padding-bottom: 110px;
+}
+
+
+/* --------------------------------------------------
+   Main floating player
+   -------------------------------------------------- */
+
+.read-aloud-player {
+    position: fixed;
+
+    left: 50%;
+    bottom: 18px;
+
+    transform: translateX(-50%);
+
+    z-index: 1100;
+
+    width: min(820px, calc(100% - 32px));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 18px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #dcdce8;
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* --------------------------------------------------
+   Left side: icon + title + status
+   -------------------------------------------------- */
+
+.read-aloud-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+.read-aloud-speaker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background-color: #f0f0f8;
+
+    font-size: 18px;
+}
+
+
+.read-aloud-brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.2;
+
+    color: #080451;
+}
+
+
+.read-aloud-brand-text strong {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.read-aloud-status {
+    margin-top: 4px;
+
+    color: #707080;
+
+    font-size: 12px;
+}
+
+
+/* --------------------------------------------------
+   Controls
+   -------------------------------------------------- */
+
+.read-aloud-controls {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.read-control {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 40px;
+    height: 40px;
+
+    padding: 0 11px;
+
+    border: 1px solid #d5d5df;
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #080451;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+.read-control:hover {
+    background-color: #f0f0f8;
+
+    border-color: #080451;
+}
+
+
+.read-control:active {
+    transform: scale(0.96);
+}
+
+
+/* --------------------------------------------------
+   Main Play / Pause button
+   -------------------------------------------------- */
+
+.read-control-main {
+    gap: 7px;
+
+    min-width: 110px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    background-color: #080451;
+
+    border-color: #080451;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.read-control-main:hover {
+    background-color: #17116f;
+
+    color: white;
+}
+
+
+.play-symbol {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 18px;
+}
+
+
+.play-text {
+    white-space: nowrap;
+}
+
+
+/* --------------------------------------------------
+   Keyboard focus
+   -------------------------------------------------- */
+
+.read-control:focus-visible,
+#readSpeed:focus-visible {
+    outline: 3px solid rgba(8, 4, 81, 0.25);
+
+    outline-offset: 3px;
+}
+
+
+/* --------------------------------------------------
+   Reading speed
+   -------------------------------------------------- */
+
+.read-speed-wrapper {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-left: 4px;
+
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+#readSpeed {
+    height: 40px;
+
+    padding: 0 8px;
+
+    border: 1px solid #d5d5df;
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #080451;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   Currently reading highlight
+   ================================================== */
+
+.currently-reading {
+    background-color:
+        rgba(255, 232, 122, 0.48)
+        !important;
+
+    border-radius: 6px;
+
+    box-shadow:
+        inset 4px 0 0 #080451,
+        0 0 0 3px rgba(8, 4, 81, 0.08);
+
+    transition:
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Give highlighted content some visual breathing space */
+
+/*
+p.currently-reading,
+h1.currently-reading,
+h2.currently-reading,
+h3.currently-reading,
+h4.currently-reading,
+h5.currently-reading,
+h6.currently-reading,
+li.currently-reading,
+small.currently-reading {
+    padding: 5px 8px;
+}
+*/
+
+
+/* Prevent sticky navbar from covering reading content */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+small {
+    scroll-margin-top: 90px;
+}
+
+
+/* ==================================================
+   Mobile
+   ================================================== */
+
+@media (max-width: 767px) {
+
+    body.has-read-aloud {
+        padding-bottom: 165px;
+    }
+
+
+    .read-aloud-player {
+        bottom: 10px;
+
+        width: calc(100% - 20px);
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 10px;
+
+        padding: 12px;
+
+        border-radius: 14px;
+    }
+
+
+    .read-aloud-brand {
+        justify-content: center;
+    }
+
+
+    .read-aloud-controls {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .play-text {
+        display: none;
+    }
+
+
+    .read-control-main {
+        min-width: 48px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .read-speed-wrapper {
+        margin-left: 0;
+    }
+}
