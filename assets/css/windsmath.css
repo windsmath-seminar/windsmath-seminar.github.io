@@ -1710,6 +1710,8 @@ main#main section.ms-all { background: var(--paper) !important; color: var(--tex
   clip-path: inset(0 -100vmax);
 }
 .ms-all .ms-all__title { margin: 0; padding: clamp(28px, 3.5vw, 48px) 0; color: var(--paper); border-bottom: 0; }
+/* Run the title band 1px into the first (navy) talk so no hairline seam shows between them */
+.ms-all .ms-all__title { clip-path: inset(0 -100vmax -1px); }
 .ms-all .past-event-block { border-bottom: 0; }
 .ms-all .past-event-block:nth-child(odd of .past-event-block) h2 { color: var(--paper); }
 .ms-all .past-event-block:nth-child(odd of .past-event-block) .event-details p { color: #d6e0ec; }
