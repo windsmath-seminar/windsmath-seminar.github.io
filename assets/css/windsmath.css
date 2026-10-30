@@ -1245,7 +1245,8 @@ a.btn-primary {
 /* A magnetic key that goes nowhere (e.g. "Closed"): no arrow, plain cursor */
 .btn.magnetic--static,
 .btn.magnetic--static[aria-disabled="true"] { opacity: 1; pointer-events: auto; cursor: default; }
-.btn.magnetic--static .magnetic__label::after { content: none; }
+.btn.magnetic--static .magnetic__label::after,
+.btn.magnetic[aria-disabled="true"] .magnetic__label::after { content: none; }
 
 /* Hover keeps the button's own colours: the motion is the feedback.
    (The fill circle is switched off; --magnetic-fill would colour it.) */
