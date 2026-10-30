@@ -2049,6 +2049,11 @@ section.event-details > .d-flex.justify-content-center {
 .w-figure img { display: block; width: 100%; height: auto; }
 
 /* Contact */
+/* Enquiry form: Microsoft Forms embed */
+.contact-form { display: block; width: 100%; height: 900px; max-height: 100vh; border: 0; border-radius: 12px; background: var(--paper); }
+.contact-form__alt { margin: 12px 0 0; font-size: 0.875rem; color: var(--grey-1); }
+.contact-form__alt a { color: inherit; text-decoration: underline; }
+
 .contact-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .contact-list li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }
 .contact-list .k { font-family: var(--mono); font-size: var(--fs-label); letter-spacing: 0.14em; text-transform: uppercase; color: var(--grey-1); padding-top: 4px; }
