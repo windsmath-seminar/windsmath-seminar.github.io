@@ -623,7 +623,7 @@ body.has-read-aloud {
 
     line-height: 1.2;
 
-    color: #080451;
+    color: #002147;
 }
 
 
@@ -669,7 +669,7 @@ body.has-read-aloud {
 
     background-color: white;
 
-    color: #080451;
+    color: #002147;
 
     font-size: 17px;
 
@@ -686,7 +686,7 @@ body.has-read-aloud {
 .read-control:hover {
     background-color: #f0f0f8;
 
-    border-color: #080451;
+    border-color: #002147;
 }
 
 
@@ -707,9 +707,9 @@ body.has-read-aloud {
     padding-left: 16px;
     padding-right: 16px;
 
-    background-color: #080451;
+    background-color: #002147;
 
-    border-color: #080451;
+    border-color: #002147;
 
     color: white;
 
@@ -780,7 +780,7 @@ body.has-read-aloud {
 
     background-color: white;
 
-    color: #080451;
+    color: #002147;
 
     cursor: pointer;
 }
@@ -798,7 +798,7 @@ body.has-read-aloud {
     border-radius: 6px;
 
     box-shadow:
-        inset 4px 0 0 #080451,
+        inset 4px 0 0 #002147,
         0 0 0 3px rgba(8, 4, 81, 0.08);
 
     transition:

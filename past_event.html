@@ -12,38 +12,77 @@
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="blocks.css">
         <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+        <link href="assets/css/windsmath.css" rel="stylesheet">
+        <meta name="theme-color" content="#002147">
         <title>Women in Data Science and Mathematics</title>
         <script src="navbar.js"></script>
     </head>
-    <body class="text-muted">
-        <main>
-            <nav class="bg-secondary navbar navbar-dark navbar-expand-lg shadow-none sticky-top"> 
-                <div class="container"> <a class="align-items-center d-inline-flex fw-bold h4 mb-0 navbar-brand text-primary text-uppercase" href="#">
-    <span class="text-white">windsmath</span>
-  </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown-2" aria-controls="navbarNavDropdown-2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> 
-</button>                   
-                   <div class="collapse navbar-collapse" id="navbarNavDropdown-2"> 
-                        <ul class="me-auto ms-auto navbar-nav"> 
-                            <li class="nav-item"> <a class="nav-link p-lg-3 text-white" href="index.html"><strong>Home</strong></a> </li>
-                            <li class="nav-item"> <a class="nav-link p-lg-3 text-white" href="upcoming_event.html"><strong>Upcoming Events</strong></a> </li>
-                            <li class="nav-item"> <a class="nav-link p-lg-3 text-white" href="past_event.html"><strong>Past Events</strong></a> </li>
-                            <li class="nav-item"> <a class="nav-link p-lg-3 text-white" href="index.html#scientific-section"><strong>Scientific Committee</strong></a> </li>
-                            <li class="nav-item"> <a class="nav-link p-lg-3 text-white" href="Instructions.html"><strong>Instructions</strong></a> </li>
-                            <li class="nav-item"> <a class="nav-link p-lg-3 text-white" href="contact.html"><strong>Contact</strong></a> </li>
-                        </ul>                
-                    </div>                   
-                </div>                 
-            </nav>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
+        <nav class="site-nav" aria-label="Primary">
+            <div class="w-container site-nav__inner">
+                <span class="wordmark">WINDSMATH<span class="wordmark__dot" aria-hidden="true"></span></span>
+                <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                    <span class="site-nav__toggle-text">Menu</span><span class="site-nav__toggle-icon" aria-hidden="true"></span>
+                </button>
+                <div class="site-nav__menu" id="site-menu">
+                    <ul class="site-nav__links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="upcoming_event.html">Upcoming Events</a></li>
+                        <li><a href="past_event.html">Past Events</a></li>
+                        <li><a href="scientific-committee.html">People</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main id="main">
+            <h1 class="visually-hidden">Past Events</h1>
 
+            <!-- Timeline: built by js/milestones.js from the events listed below -->
+            <div class="ms" id="milestones" role="region" aria-label="Timeline of past events"></div>
 
-            <section class="pb-2 pt-4 text-white-50 bg-light"> 
+            <div class="ms-more">
+                <a href="#all-events" class="ms-more__btn" aria-label="Scroll down to all past events"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M6 6l6 6 6-6M6 12l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+
+            <section class="ms-all pb-2 pt-4 bg-light">
 
 
 <div class="container pb-2 pt-2">
-  <h3 class="fw-bold h1 mb-5 text-primary">Past Events</h3>
+  <h2 class="ms-all__title" id="all-events">All Past Events</h2>
 
 	
+	  <div class="past-event-block event-link">
+    <div class="event-details">
+      <h2>Fast Bayesian Calibration of Option Pricing Models Based on Sequential Monte Carlo Methods and Deep Learning</h2>
+      <p>Speaker: Prof. Dr. Eva Lütkebohmert-Holtz</p>
+      <p>Date: October 28, 2026</p>
+
+
+
+      <p>
+        <a href="event-details-261028.html" style="color: #00003B; text-decoration: underline;">
+          More Info
+        </a>
+      </p>
+    </div>
+
+    <div class="event-details">
+      <iframe class="video-iframe"
+        src="https://www.youtube.com/embed/UDEtGXsDQXc?si=6KJXonWPLkW3QZJO"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
 	  <div class="past-event-block event-link">
     <div class="event-details">
       <h2>The Rules-and-Facts Model for Simultaneous Generalization and Memorization in Neural Networks</h2>
@@ -163,7 +202,7 @@
 	
 	
   <!-- WINDSMATH Research Talk Video Festival 2026 -->
-  <div class="past-event-block event-link festival-block">
+  <div class="past-event-block event-link festival-block" data-milestone-date="2026-04">
     <div class="event-details">
       <h2>WINDSMATH Research Talk Video Festival 2026</h2>
       <p>First Place: Alona Jurgenson (University of Oxford)</p>
@@ -622,108 +661,53 @@
                       </div>   
             </section>
 
- <hr style="border-top: 10px solid gray; margin: 0;">
-
-            <section class="pb-3 pt-3 text-center">
-                <div class="container pt-3"> 
-                    <div class="g-4 justify-content-center row row-cols-lg-4 row-cols-sm-2"> 
-                        <div>
-                            <div class="bg-white pe-3 pt-4">
-                                 <img src="img/datasig_logo.png" alt="Image" class="img-fluid">
-                            </div>                             
-                        </div>
-                        <div>
-                            <div class="bg-white pe-3 pt-4">
-                                 <img src="img/UCL_logo.png" alt="Image" class="img-fluid">
-                            </div>                             
-                        </div>      
-                        <div>
-                            <div class="bg-white pe-3 pt-4">
-                                 <img src="img/strath.webp" alt="Image" class="img-fluid">
-                            </div>                             
-                        </div>  
-                    </div>     
-                    
+            <section class="supporters" id="sponsors-section" aria-labelledby="sponsors-label">
+                <div class="w-container supporters__inner">
+                    <h2 class="w-label" id="sponsors-label">Sponsors</h2>
+                    <figure class="supporters__scene">
+                        <picture>
+                            <img src="img/sponsors-boats-oxford.webp" srcset="img/sponsors-boats-oxford-800.webp 800w, img/sponsors-boats-oxford.webp 1200w" sizes="(min-width: 800px) 760px, 100vw" width="1200" height="386" loading="lazy" decoding="async" alt="Sponsors: DataSig, UCL and the University of Strathclyde, shown as three sailing boats on the sea">
+                        </picture>
+                    </figure>
                 </div>
             </section>
-             <hr style="border-top: 10px solid gray; margin: 0;">
-            <section class="text-center text-white-50 bg-light py-5" id="Join-section">
-                <div class="container pb-3 pt-3 text-purple"> 
-                    <h2 class="fw-bold h2 mb-4">Join Our Seminar Series Now</h2>
-                    <div class="pt-3" style="text-align: center;">
-    <div class="d-inline-flex flex-wrap gap-2 justify-content-center py-1">
-<a href="https://forms.office.com/e/7ZRLndfKfM" class="btn btn-primary pe-4 ps-4">Register Now</a>
-</div>
-  <script type="text/javascript">
-    var z7kbgcz18wyqy1;
-    (function(d, t) {
-      var s = d.createElement(t),
-        options = {
-          'userName':'windsmath',
-          'formHash':'z7kbgcz18wyqy1',
-          'autoResize':true,
-          'height':'736',
-          'async':true,
-          'host':'wufoo.com',
-          'header':'show',
-          'ssl':true
-        };
-      s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js';
-      s.onload = s.onreadystatechange = function() {
-        var rs = this.readyState;
-        if (rs)
-          if (rs != 'complete')
-            if (rs != 'loaded') return;
-        try {
-          z7kbgcz18wyqy1 = new WufooForm();
-          z7kbgcz18wyqy1.initialize(options);
-          z7kbgcz18wyqy1.display();
-        } catch (e) {}
-      };
-      var scr = d.getElementsByTagName(t)[0],
-        par = scr.parentNode;
-      par.insertBefore(s, scr);
-    })(document, 'script');
-  </script>
-</div>
-                </div>                 
-            </section>
-            
-            <footer class="bg-secondary pt-2 text-white"> 
-                <div class="container"> 
-                    <div class="row">                        
-                        <div class="col-md col-sm-6 py-3"> 
-                            <h2 class="fw-bold h4 mb-4 text-white">General</h2> 
-                            <ul class="list-unstyled"> 
-                                <li class="mb-2"> <a href="index.html" class="link-light">About Us</a> 
-                                </li>                                 
-                                <li class="mb-2"> <a href="contact.html" class="link-light">Contact Us</a> 
-                                </li>                                 
-                            </ul>                             
-                        </div>                         
-                        <div class="col-md col-sm-6 py-3"> 
-                            <h2 class="fw-bold h4 mb-4 text-white">Quick Links</h2> 
-                            <ul class="list-unstyled"> 
-                                <li class="mb-2"> <a href="upcoming_event.html" class="link-light">Upcoming Events</a> 
-                                </li>
-                                <li class="mb-2"> <a href="index.html#scientific-section" class="link-light">Scientific Committee</a> 
-                                </li>                                 
-                            </ul>                             
-                        </div>                                             
-                    </div>     
-                    <small class="text-muted">This website is maintained by <a href="https://pureportal.strath.ac.uk/en/persons/danqi-zhuang/" target="_blank" style="color: azure">Danqi Zhuang</a>. If you experience any issues or have inquiries regarding registration or our mailing list, please feel free to <a style="color: azure" href="mailto:xinhengxie@gmail.com">contact me</a>.</small>
-                </div>                 
-            </footer>
         </main>
+        <footer class="site-footer">
+            <div class="w-container">
+                <div class="site-footer__grid">
+                    <div class="site-footer__brand">
+                        <a class="wordmark" href="index.html">WINDSMATH<span class="wordmark__dot" aria-hidden="true"></span></a>
+                        <p>Seminar Series: Women in Data Science and Mathematics</p>
+                    </div>
+                    <div class="site-footer__col">
+                        <h2>Connect</h2>
+                        <ul>
+                            <li><a href="mailto:windsmath@windsmath.com">Email</a></li>
+                            <li><a href="https://www.linkedin.com/groups/12825074/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/windsmath" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+                            <li><a href="https://www.youtube.com/@windsmath" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="site-footer__base">
+                    <small>This website is maintained by <a href="https://pureportal.strath.ac.uk/en/persons/danqi-zhuang/" target="_blank" rel="noopener noreferrer">Danqi Zhuang</a>. If you experience any issues or have inquiries regarding registration or our mailing list, please feel free to <a href="mailto:xinhengxie@gmail.com">contact me</a>.</small>
+                </div>
+            </div>
+        </footer>
         <script src="assets/js/app.js"></script>
 		<script src="js/read-aloud.js"></script>
+        <script src="js/milestones.js"></script>
         <!-- <script src="assets/js/popper.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script> -->
         <script>
-  function scrollToNextSection() {
-    var nextSection = document.getElementById("Join-section");
-    nextSection.scrollIntoView({ behavior: "smooth" });
-  }
-</script>
+            // The arrow under the timeline brings the full list up to just under the bar
+            document.querySelector(".ms-more__btn").addEventListener("click", function (event) {
+                var list = document.getElementById("all-events");
+                var bar = document.querySelector(".site-nav");
+                event.preventDefault();
+                window.scrollTo({ top: list.getBoundingClientRect().top + window.pageYOffset - bar.offsetHeight, behavior: "smooth" });
+                history.replaceState(null, "", "#all-events");
+            });
+        </script>
     </body>
 </html>
