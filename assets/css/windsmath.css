@@ -530,6 +530,14 @@ a.btn-primary {
   }
 
   body.nav-open { overflow: hidden; }
+
+  /* The scrolled bar's backdrop-filter would make it the containing block of the
+     fixed menu, squeezing the menu into the bar's own height: drop it while open */
+  .site-nav.is-open {
+    background: var(--ink);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 }
 
 /* --------------------------------------------------------------------------
