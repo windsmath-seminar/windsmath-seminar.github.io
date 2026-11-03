@@ -106,11 +106,13 @@
                             <div class="trio__col trio__col--next">
                                 <p class="w-label">Next seminar</p>
 
-                                <h4 class="trio__title trio__title--next"><a href="event-details-261118.html">Beyond Generalization: The Challenge of Continual Adaptation</a></h4>
-                                <dl class="trio__meta">
-                                    <div><dt>Speaker</dt><dd><a href="event-details-261118.html">Prof. Qi Chen</a></dd></div>
-                                    <div><dt>Date &amp; Time</dt><dd><a href="event-details-261118.html">16:00 (GMT), November 18, 2026</a></dd></div>
-                                </dl>
+                                <a class="trio__block" href="event-details-261118.html">
+                                    <h4 class="trio__title trio__title--next">Beyond Generalization: The Challenge of Continual Adaptation</h4>
+                                    <dl class="trio__meta">
+                                        <div><dt>Speaker</dt><dd>Prof. Qi Chen</dd></div>
+                                        <div><dt>Date &amp; Time</dt><dd>16:00 (GMT), November 18, 2026</dd></div>
+                                    </dl>
+                                </a>
                                 <p class="trio__text trio__note">To register, simply click on the &lsquo;Event Registration&rsquo; button. We look forward to sharing this exciting event with you.</p>
                                 <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Lb0H70XyHUKL9U7hfSt_AkxD6TlU-RRDouYWCnzZMSdURFdHSVQ5NFYyR1BMODNUV0E2TkNVVjNSOS4u&lang=en-GB" class="btn btn-primary magnetic"><span class="magnetic__fill" aria-hidden="true"></span><span class="magnetic__label">Event Registration</span></a>
 
@@ -318,11 +320,12 @@
                 .trio__col--next .trio__title--next { margin-top: clamp(14px, 2vw, 28px); }
                 .trio__col > .trio__note { margin-top: auto; }
                 .trio__col > .trio__note + .btn { margin-top: 4px; }
-                /* Speaker and date link to the talk page too, swelling like the title */
-                .trio__meta dd a { display: inline-block; color: inherit; text-decoration: none; transform-origin: left center; transition: transform 0.25s var(--ease); }
-                .trio__meta dd a:hover,
-                .trio__meta dd a:focus-visible { color: inherit !important; text-decoration: none !important; transform: scale(1.06); }
-                @media (prefers-reduced-motion: reduce) { .trio__meta dd a { transition: transform 0.25s var(--ease) !important; } }
+                /* Title, speaker and date form one link to the talk page; it swells a little on hover */
+                .trio__block { display: flex; flex-direction: column; gap: 14px; width: 100%; color: inherit; text-decoration: none; transform-origin: left center; transition: transform 0.25s var(--ease); }
+                .trio__block:hover,
+                .trio__block:focus-visible { color: inherit !important; text-decoration: none !important; transform: scale(1.02); }
+                @media (prefers-reduced-motion: reduce) { .trio__block { transition: transform 0.25s var(--ease) !important; } }
+                .trio__col--next > .btn { align-self: center; }
                 .trio__title { margin: 0; font-size: 1.75rem; line-height: 1.12; letter-spacing: -0.015em; }
                 .trio__title--sm { font-size: 1.1875rem; line-height: 1.3; letter-spacing: -0.005em; }
                 .trio__title a { text-decoration: none; }
