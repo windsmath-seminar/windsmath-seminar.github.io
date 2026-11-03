@@ -821,148 +821,37 @@ a.btn-primary {
 }
 
 /* --------------------------------------------------------------------------
-   Hanging badges (People page)
-   Each row is a wire; every badge hangs from it on a string and sways a
-   little. Clicking flips the badge to the profile on the back (js/idcards.js).
+   Badges (People page)
+   A plain grid of ID badges. Clicking flips a badge to the profile on the
+   back; a spotlight follows the pointer (js/idcards.js).
    -------------------------------------------------------------------------- */
 
 .lanyard {
-  --sag: 22px;
-  position: relative;
   display: grid;
   grid-template-columns: repeat(var(--n), minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 40px) 0;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.lanyard + .lanyard { margin-top: clamp(40px, 5vw, 72px); }
-
-/* The wire: a shallow curve whose lowest point is --sag below the ends */
-.lanyard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: calc(var(--sag) + 4px);
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 26' preserveAspectRatio='none'%3E%3Cpath d='M0 2 Q50 46 100 2' fill='none' stroke='%239c9ab8' stroke-width='1.5' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
-  pointer-events: none;
-}
-.lanyard.has-svg-wire::before { display: none; }
-
-/* Wire drawn by js/idcards.js, with the section title along it */
-.lanyard__wire {
-  position: absolute;
-  z-index: 1;
-  top: -26px;
-  left: 0;
-  overflow: visible;
-  pointer-events: none;
-}
-.lanyard__wire path { fill: none; stroke: #9c9ab8; stroke-width: 1.5; }
-.lanyard__text {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  fill: var(--grey-1);
-}
-.lanyard__num { fill: var(--text); }
-
-/* The heading moves onto the wire; it stays available to screen readers */
-@media (min-width: 761px) {
-  .has-wire-title .w-head {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-  .has-wire-title .lanyard:first-of-type { margin-top: 28px; }
-}
+.lanyard + .lanyard { margin-top: clamp(24px, 3vw, 40px); }
 
 .idcard-wrap {
-  /* Where this badge meets the wire, and how far it hangs below it */
-  --wy: calc(2px + 4 * var(--sag) * var(--x) * (1 - var(--x)));
-  --drop: 40px;
-  --sway-dur: 7s;
-  --sway-delay: 0s;
-  position: relative;
   display: flex;
   justify-content: center;
-  padding: calc(var(--wy) + var(--drop)) 12px 0;
-  transform-origin: 50% var(--wy);
-  animation: badge-sway var(--sway-dur) ease-in-out var(--sway-delay) infinite alternate;
-}
-.idcard-wrap:nth-child(2) { --drop: 68px; --sway-dur: 8.2s; --sway-delay: -3s; }
-.idcard-wrap:nth-child(3) { --drop: 50px; --sway-dur: 6.4s; --sway-delay: -5s; }
-.idcard-wrap:nth-child(4) { --drop: 76px; --sway-dur: 7.6s; --sway-delay: -1.5s; }
-.idcard-wrap:hover,
-.idcard-wrap:focus-within { animation-play-state: paused; }
-
-/* String */
-.idcard-wrap::before {
-  content: "";
-  position: absolute;
-  top: var(--wy);
-  left: 50%;
-  width: 1px;
-  height: calc(var(--drop) - 4px);
-  background: #8f8daa;
-}
-/* Ring where the string meets the wire */
-.idcard-wrap::after {
-  content: "";
-  position: absolute;
-  top: calc(var(--wy) - 4px);
-  left: calc(50% - 4px);
-  width: 9px;
-  height: 9px;
-  border: 1.5px solid #8f8daa;
-  border-radius: 50%;
-  background: var(--paper);
-}
-
-@keyframes badge-sway {
-  from { transform: rotate(-1.4deg); }
-  to { transform: rotate(1.4deg); }
+  padding: 0 12px;
 }
 
 .idcard {
   position: relative;
+  display: flex;
   width: 100%;
   max-width: 236px;
   perspective: 1200px;
   cursor: pointer;
 }
-/* Metal clip at the top of the badge */
-.idcard::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: -12px;
-  left: calc(50% - 14px);
-  width: 28px;
-  height: 18px;
-  border: 1px solid #b5b3cc;
-  border-radius: 5px;
-  background: linear-gradient(#f1f0f7, #d6d5e4);
-}
-.idcard::after {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  top: -6px;
-  left: calc(50% - 7px);
-  width: 14px;
-  height: 4px;
-  border-radius: 2px;
-  background: #8f8daa;
-}
+/* Badges in a row share one height, so their footers line up */
+.idcard > .idcard__inner { flex: 1; }
 
 .idcard__inner {
   display: grid;
@@ -1117,20 +1006,16 @@ a.btn-primary {
 .idcard__back .idcard__flip { background: var(--paper); color: var(--ink); }
 .idcard__back .idcard__flip:hover { background: var(--grey-2); }
 
-/* The badges always sway and flip, even with reduced motion */
+/* The badges always flip, even with reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .idcard-wrap { animation: badge-sway var(--sway-dur) ease-in-out var(--sway-delay) infinite alternate !important; }
-  .idcard-wrap:hover, .idcard-wrap:focus-within { animation-play-state: paused !important; }
   .idcard__inner { transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) !important; }
 }
 
-/* Narrow screens: two badges per row, each on its own hook */
+/* Narrow screens: two badges per row */
 @media (max-width: 760px) {
-  .lanyard { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
-  .lanyard + .lanyard { margin-top: 32px; }
-  .lanyard::before, .lanyard__wire { display: none; }
-  .idcard-wrap,
-  .idcard-wrap:nth-child(n) { --wy: 4px; --drop: 34px; padding-left: 6px; padding-right: 6px; }
+  .lanyard { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 24px; }
+  .lanyard + .lanyard { margin-top: 24px; }
+  .idcard-wrap { padding-left: 6px; padding-right: 6px; }
   .idcard__face { padding: 14px 10px 10px; }
   .idcard__name { font-size: 1.125rem; }
   .idcard__title, .idcard__facts dd { font-size: 0.8125rem; }
