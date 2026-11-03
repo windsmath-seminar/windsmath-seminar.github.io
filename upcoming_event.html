@@ -57,44 +57,36 @@
 
           <div class="w-list">
 
-            <!-- 休息期: shown when no seminar has been announced -->
-            <div class="empty-state">
-              <p class="w-label">Next seminar</p>
-              <h2 class="w-h2"><a href="event-details-261118.html">Beyond Generalization: The Challenge of Continual Adaptation</a></h2>
-              <dl class="w-specs">
-                <div><dt>Speaker</dt><dd>Prof. Qi Chen</dd></div>
-                <div><dt>Date</dt><dd>November 18, 2026</dd></div>
-                <div><dt>Time</dt><dd>16:00 (GMT)</dd></div>
-              </dl>
-              <p class="w-muted">The registration link will be posted soon. We look forward to sharing this exciting event with you. Stay tuned!</p>
-              <div class="w-actions">
-                <a href="event-details-261118.html" class="btn btn-primary magnetic"><span class="magnetic__fill" aria-hidden="true"></span><span class="magnetic__label">More details</span></a>
-                <!-- Event Registration stays inactive until the registration link is out; then make it
-                     <a href="REGISTRATION-LINK" class="btn btn-primary magnetic"> ... </a> (drop aria-disabled) -->
-                <button type="button" class="btn btn-primary magnetic" aria-disabled="true"><span class="magnetic__fill" aria-hidden="true"></span><span class="magnetic__label">Event Registration</span></button>
-                <!-- Hidden while a seminar is being promoted; show it again between seminars
-                <a href="past_event.html" class="btn btn-primary magnetic"><span class="magnetic__fill" aria-hidden="true"></span><span class="magnetic__label">Watch past talks</span></a>
-                -->
-              </div>
-            </div>
-
-            <!-- 活动宣传期: remove the 休息期 block above, then uncomment and edit this one
+            <!-- 活动宣传期: the seminar being promoted -->
             <article class="upcoming-item">
-              <a class="upcoming-item__photo" href="event-details-260930.html"><img src="img/lenka.jpeg" alt="Prof. Lenka Zdeborová"></a>
+              <a class="upcoming-item__photo" href="event-details-261118.html"><img src="img/qichen.jpg" alt="Prof. Qi Chen"></a>
               <div class="upcoming-item__body">
-                <p class="w-label">September 30, 2026 &middot; 16:00 (BST)</p>
-                <h2 class="upcoming-item__title"><a href="event-details-260930.html">The Rules-and-Facts Model for Simultaneous Generalization and Memorization in Neural Networks</a></h2>
+                <p class="w-label">Next seminar &middot; November 18, 2026 &middot; 16:00 (GMT)</p>
+                <h2 class="upcoming-item__title"><a href="event-details-261118.html">Beyond Generalization: The Challenge of Continual Adaptation</a></h2>
                 <dl class="w-specs">
-                  <div><dt>Speaker</dt><dd>Prof. Lenka Zdeborová</dd></div>
-                  <div><dt>Date</dt><dd>September 30, 2026</dd></div>
-                  <div><dt>Time</dt><dd>16:00 (BST)</dd></div>
+                  <div><dt>Speaker</dt><dd>Prof. Qi Chen</dd></div>
+                  <div><dt>Date</dt><dd>November 18, 2026</dd></div>
+                  <div><dt>Time</dt><dd>16:00 (GMT)</dd></div>
                 </dl>
+                <p class="w-muted upcoming-item__note">The registration link will be posted soon. We look forward to sharing this exciting event with you. Stay tuned!</p>
                 <div class="w-actions">
-                  <a href="https://forms.cloud.microsoft/e/R3Y8rSeqK6" class="btn btn-primary magnetic"><span class="magnetic__fill" aria-hidden="true"></span><span class="magnetic__label">Event Registration</span></a>
-                  <a href="event-details-260930.html" class="w-link">Abstract &amp; speaker</a>
+                  <a href="event-details-261118.html" class="btn btn-primary magnetic"><span class="magnetic__fill" aria-hidden="true"></span><span class="magnetic__label">More details</span></a>
+                  <!-- Event Registration stays inactive until the registration link is out; then make it
+                       <a href="REGISTRATION-LINK" class="btn btn-primary magnetic"> ... </a> (drop aria-disabled) -->
+                  <button type="button" class="btn btn-primary magnetic" aria-disabled="true"><span class="magnetic__fill" aria-hidden="true"></span><span class="magnetic__label">Event Registration</span></button>
                 </div>
               </div>
             </article>
+
+            <!-- 休息期: between seminars, replace the article above with this block
+            <div class="empty-state">
+              <p class="w-label">Next seminar</p>
+              <h2 class="w-h2">Coming soon</h2>
+              <p class="w-muted">The information for the upcoming seminar is almost here. Keep an eye out for updates, which will be posted soon. We look forward to sharing this exciting event with you. Stay tuned!</p>
+              <div class="w-actions">
+                <a href="past_event.html" class="btn btn-primary magnetic"><span class="magnetic__fill" aria-hidden="true"></span><span class="magnetic__label">Watch past talks</span></a>
+              </div>
+            </div>
             -->
 
             <!-- Video festival template
