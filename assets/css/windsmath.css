@@ -2362,7 +2362,6 @@ body.has-read-aloud { padding-bottom: 0; }
 .upcoming-item__body > .w-label { margin-bottom: 20px; }
 .upcoming-item__title { margin: 0 0 32px; font-size: var(--fs-h2); line-height: 1.08; letter-spacing: -0.02em; }
 .upcoming-item__title a { text-decoration: none; }
-.upcoming-item__title a:hover { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
 @media (max-width: 900px) {
   .upcoming-item__photo { grid-column: 1 / span 6; }
   .upcoming-item__body { grid-column: 1 / -1; }
@@ -2500,6 +2499,20 @@ main a:not(.btn):not(.w-link):not(.wordmark):hover { color: var(--accent); }
   .w-link { transition: transform 0.25s var(--ease) !important; }
 }
 
+/* Talk titles that link to the talk page swell the same way */
+.trio__title a,
+.empty-state .w-h2 a,
+.upcoming-item__title a { display: inline-block; text-decoration: none; transform-origin: left center; transition: transform 0.25s var(--ease); }
+.trio__title a:hover,
+.trio__title a:focus-visible,
+.empty-state .w-h2 a:hover,
+.empty-state .w-h2 a:focus-visible,
+.upcoming-item__title a:hover,
+.upcoming-item__title a:focus-visible { color: inherit !important; text-decoration: none !important; transform: scale(1.04); }
+@media (prefers-reduced-motion: reduce) {
+  .trio__title a, .empty-state .w-h2 a, .upcoming-item__title a { transition: transform 0.25s var(--ease) !important; }
+}
+
 .btn:hover,
 .btn-primary:hover { color: var(--accent) !important; border-color: var(--accent) !important; }
 .w-dark .btn:hover,
@@ -2507,7 +2520,6 @@ main a:not(.btn):not(.w-link):not(.wordmark):hover { color: var(--accent); }
 #Join-section:not(.closing) .btn:hover { color: var(--paper) !important; border-color: var(--paper) !important; }
 
 .person__name a:hover,
-.upcoming-item__title a:hover,
 .next__title a:hover { color: var(--accent); }
 .w-dark .next__title a:hover { color: var(--paper); }
 
