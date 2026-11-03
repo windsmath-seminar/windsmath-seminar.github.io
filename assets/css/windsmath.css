@@ -1723,6 +1723,8 @@ p.event-date {
 .speaker-pic + .event-info,
 .og_all-pic + .event-info { grid-column: 4 / span 8; }
 .og_all-pic { grid-column: 1 / span 3; }
+/* No speaker photo yet: the text column sits in the middle */
+.event-body > .event-info:only-child { grid-column: 3 / span 8; }
 
 .speaker-pic img,
 .og_all-pic img {
@@ -1795,7 +1797,8 @@ section.event-details > .d-flex.justify-content-center {
 
 @media (max-width: 900px) {
   .speaker-pic, .og_all-pic { grid-column: 1 / span 6; }
-  .speaker-pic + .event-info, .og_all-pic + .event-info { grid-column: 1 / -1; }
+  .speaker-pic + .event-info, .og_all-pic + .event-info,
+  .event-body > .event-info:only-child { grid-column: 1 / -1; }
   h1.event-title, .event-header h1 { margin-top: 0 !important; }
 }
 @media (max-width: 420px) {
