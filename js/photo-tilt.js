@@ -1,5 +1,5 @@
 // ---------------------------------
-// Event pages: the speaker photo tilts in 3D towards the mouse
+// Event pages and Upcoming: the speaker photo tilts in 3D towards the mouse
 // (up to 12 degrees on each axis) and settles back flat in 0.4s
 // when the mouse leaves. Mouse only; touch screens keep it flat.
 // ---------------------------------
@@ -12,7 +12,7 @@
         return;
     }
 
-    document.querySelectorAll(".speaker-pic img, .og_all-pic img").forEach(function (photo) {
+    document.querySelectorAll(".speaker-pic img, .og_all-pic img, .upcoming-item__photo img").forEach(function (photo) {
 
         const frame = photo.parentElement;
         frame.classList.add("tilt");
