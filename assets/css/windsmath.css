@@ -1453,6 +1453,10 @@ main#main { overflow-x: clip; }
 .ms__item.is-active .ms__card { opacity: 1; transform: none; }
 .ms__card:focus-visible { outline: 2px solid var(--paper); outline-offset: 6px; }
 
+/* Date and speaker use the system font, like .ms__now: on some Chrome/GPU
+   setups Inter on these animated cards rendered as stray symbols. */
+.ms__date,
+.ms__who { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Segoe UI", system-ui, sans-serif; }
 .ms__date {
   margin-bottom: 16px;
   font-size: 0.9375rem;
