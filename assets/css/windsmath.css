@@ -1079,8 +1079,8 @@ a.btn-primary {
   height: auto;
   /* Sea fades out over 20% at each side; the boats stay solid
      (mask: img/sponsors-boats-mask.png, made from the boat outlines) */
-  -webkit-mask: url("../../img/sponsors-boats-mask.png") 0 0 / 100% 100% no-repeat;
-  mask: url("../../img/sponsors-boats-mask.png") 0 0 / 100% 100% no-repeat;
+  -webkit-mask: url("../../img/sponsors-boats-mask.png?v=20261106") 0 0 / 100% 100% no-repeat;
+  mask: url("../../img/sponsors-boats-mask.png?v=20261106") 0 0 / 100% 100% no-repeat;
 }
 
 /* --------------------------------------------------------------------------
