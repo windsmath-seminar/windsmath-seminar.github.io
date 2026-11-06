@@ -2365,7 +2365,7 @@ body.has-read-aloud { padding-bottom: 0; }
 .upcoming-item__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; border-radius: 22px; background: #e8e8f2; }
 .upcoming-item__body { grid-column: 4 / span 8; }
 .upcoming-item__body > .w-label { margin-bottom: 20px; }
-.upcoming-item .w-actions { gap: 20px 44px; }
+.upcoming-item .w-actions { gap: 20px 64px; }
 .upcoming-item__title { margin: 0 0 32px; font-size: var(--fs-h2); line-height: 1.08; letter-spacing: -0.02em; }
 .upcoming-item__title a { text-decoration: none; }
 @media (max-width: 900px) {
