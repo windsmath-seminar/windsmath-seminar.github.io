@@ -1782,7 +1782,8 @@ li.speaker-info-item {
   max-width: 70ch;
 }
 .event-info > p.speaker-info-item:first-of-type,
-.event-info > h2 + p.speaker-info-item {
+.event-info > h2 + p.speaker-info-item,
+.event-info > p.speaker-info-item--lead {
   font-family: var(--serif);
   font-size: 1.25rem !important;
   line-height: 1.6;
@@ -1809,7 +1810,8 @@ section.event-details > .d-flex.justify-content-center {
   .speaker-pic { grid-column: 1 / span 8; }
   .speaker-pic img { width: 100% !important; height: auto !important; }
   .event-info > p.speaker-info-item:first-of-type,
-  .event-info > h2 + p.speaker-info-item { font-size: 1.125rem !important; }
+  .event-info > h2 + p.speaker-info-item,
+  .event-info > p.speaker-info-item--lead { font-size: 1.125rem !important; }
   .speaker-info-item, .event-info .speaker-info-item { font-size: 1rem !important; }
 }
 
